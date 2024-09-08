@@ -1,5 +1,5 @@
 import { Box,Image,Link,Heading,Text } from "@chakra-ui/react"
-import { FaGithub } from "react-icons/fa";
+import github from '../../assets/github-sign.png'
 import { CiGlobe } from "react-icons/ci";
 
 const ProjectsDisplay = ({img,text,githubLink,liveLink,projectTitle,d}) => {
@@ -13,7 +13,7 @@ const ProjectsDisplay = ({img,text,githubLink,liveLink,projectTitle,d}) => {
             <Heading>{projectTitle}</Heading>
             <Text>{text}</Text>
             <Box display={'flex'} gap={'20px'} paddingTop={'10px'} paddingBottom={'10px'}>
-            <Link href={githubLink}><FaGithub className="size-8"/></Link>
+            <Link href={githubLink}><Image src={github} className="size-8"/></Link>
             <Link href={liveLink} display={d}><CiGlobe className="size-8"/></Link>
             </Box>
         </Box>
