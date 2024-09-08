@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+  background-color: #E5E5E5;
+}
+
+.img{
+  box-shadow: -15px 1px #008AAA;
+}
+
+@media (max-width:500px) {
+  .img{
+    box-shadow: none;
+  }  
+}
