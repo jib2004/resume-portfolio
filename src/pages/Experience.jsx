@@ -1,5 +1,5 @@
 import App from "../App"
-import { Heading,Box, } from "@chakra-ui/react"
+import { Heading,Box } from "@chakra-ui/react"
 import ExperienceDisplay from "../components/UI/ExperienceDisplay"
 import Skills from "../components/UI/Skills"
 import html from  '../assets/html-5.png'
