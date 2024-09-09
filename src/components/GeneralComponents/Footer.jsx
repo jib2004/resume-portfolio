@@ -5,7 +5,7 @@ import github from '../../assets/github-sign.png'
 
 const Footer = () => {
   return (
-    <Box h={'60px'} paddingRight={'10px'} display={'flex'} alignItems={'center'}>
+    <Box h={'60px'} className='p-4' display={'flex'} alignItems={'center'}>
       <Heading size={''} >CONTACT ME:</Heading>
       <UnorderedList listStyleType={'none'} display={'flex'} alignItems={'center'} gap={'20px'}>
         <ListItem><Link href='https://www.instagram.com/obasaajibola04/' target='_blank'><Image src={instagram} className="size-8"/></Link></ListItem>

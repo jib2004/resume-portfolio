@@ -18,7 +18,7 @@ const Home = () => {
             <span className='text-[#D1884F]'> Frontend Developer. </span>
             </Heading>
 
-            <Box w={{base:'90vw',md:'auto'}} textAlign={{base:'center',md:'start'}}>
+            <Box w={{md:'auto'}} textAlign={{base:'center',md:'start'}} className='px-3 md:p-0'>
                 <Text fontSize={'20px'} fontWeight={500}>As a web developer, I bring a unique set of skills and experience that make me a valuable addition to any team. I have a solid foundation in programming languages such as HTML, CSS, JavaScript and TypeScript, as well as experience with frameworks like React and Nextjs . Additionally, I am well-versed in server-side technologies like Node.js and its framework Expressjs, and have experience working with databases like MongoDB. But beyond technical skills, I am a team player who values collaboration and communication. I thrive in environments where I can work with others to solve complex problems and create innovative solutions. I am also dedicated to staying up-to-date with the latest technologies and industry trends, ensuring that my work is always of the highest quality. Overall, I believe that my technical expertise, collaborative mindset, and commitment to excellence make me an ideal candidate for any web development role.</Text>
                 <Box display={'flex'}  alignItems={'center'} gap={'15px'} justifyContent={{base:"center",xl:"start"}} paddingTop={'10px'} paddingBottom={'10px'}>
                   <Button w={{base:'150px',md:'205px'}} background={'#008AAA'} color={'#fff'}><a href={resume} download className='w-full h-full flex items-center justify-center'>Resume</a> </Button>
@@ -27,9 +27,9 @@ const Home = () => {
             </Box>
         </Box>
 
-        <div>
-          <Image src={myPhoto} w={{base:'90vw',md:'464px'}} h={{md:'489px'}} objectFit={'fit'} borderBottomStartRadius={{md:'200px'}} className='img'/>
-        </div>
+        <Box w={{base:'90vw',md:'464px'}} className='mx-auto md:m-0'>
+          <Image src={myPhoto} w={{base:'90vw',md:'464px'}}  h={{md:'489px'}} objectFit={'fit'} borderBottomStartRadius={{md:'200px'}} className='img'/>
+        </Box>
       </Box>
 
 
