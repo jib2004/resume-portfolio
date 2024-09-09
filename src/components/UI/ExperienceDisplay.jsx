@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const ExperienceDisplay = ({jobTitle,companyname,startDate,endDate,jobDecription,jobDecription1}) => {
   return (
-    <div className="md:px-[10px ]">
+    <div className="px-1 md:px-[10px]">
         <Box display={'flex'} alignItems={'center'} justifyContent={'space-between'}>
         <Heading size={{base:'', md:"2xl"}}>{jobTitle}</Heading>
         <Text>{`${startDate} - ${endDate}`}</Text>
