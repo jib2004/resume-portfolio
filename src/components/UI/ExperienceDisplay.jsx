@@ -9,7 +9,7 @@ const ExperienceDisplay = ({jobTitle,companyname,startDate,endDate,jobDecription
         <Text>{`${startDate} - ${endDate}`}</Text>
         </Box>
         <Heading size={{base:'', md:"2xl"}}>{companyname}</Heading>
-        <UnorderedList>
+        <UnorderedList className="w-[90vw] md:mx-0 md:w-auto">
           <ListItem>{jobDecription}</ListItem>
           <ListItem>{jobDecription1}</ListItem>
           
