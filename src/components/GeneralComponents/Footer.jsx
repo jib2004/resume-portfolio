@@ -12,7 +12,6 @@ const Footer = () => {
         <ListItem><Link href='https://github.com/jib2004' target='_blank'><Image src={github} className="size-8 object-contain" /></Link></ListItem>
         <ListItem><Link href='https://www.linkedin.com/in/obasa-ajibola-005690242/' target='_blank'><Image src={linkedin} className="size-8 object-contain" /></Link></ListItem>
       </UnorderedList>
-      
     </Box>
   )
 }

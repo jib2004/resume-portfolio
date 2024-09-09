@@ -3,14 +3,12 @@ import github from '../../assets/github-sign.png'
 import { CiGlobe } from "react-icons/ci";
 import PropTypes from 'prop-types';
 
-
 const ProjectsDisplay = ({img,text,githubLink,liveLink,projectTitle,d}) => {
   return (
     <Box display={'flex'}  gap={'30px'} flexDirection={{base:'column',md:'row'}} className="my-5">
         <Box  className="">
             <Image src={img} alt="Project Image" w={{base:'310px',md:'395px'}} h={{base:'',md:'300px'}}  objectFit={'cover'} objectPosition={'left'}/>
         </Box>
-
         <Box  display={'flex'} flexDirection={'column'}  justifyContent={'space-between'} w={{md:'600px'}}>
             <Heading>{projectTitle}</Heading>
             <Text>{text}</Text>
@@ -22,7 +20,6 @@ const ProjectsDisplay = ({img,text,githubLink,liveLink,projectTitle,d}) => {
     </Box>
   )
 }
-
 ProjectsDisplay.propTypes={
   img:PropTypes.string,
   text:PropTypes.string,

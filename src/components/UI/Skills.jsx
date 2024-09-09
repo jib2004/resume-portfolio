@@ -1,8 +1,6 @@
 import { Box,Image } from "@chakra-ui/react"
 import PropTypes from 'prop-types';
 
-
-
 const Skills = ({img}) => {
   return (
     <Box>
@@ -10,7 +8,6 @@ const Skills = ({img}) => {
     </Box>
   )
 }
-
 Skills.propTypes={
   img:PropTypes.string
 }

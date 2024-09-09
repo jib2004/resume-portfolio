@@ -17,16 +17,13 @@ import expressjs from  '../assets/Express.png'
 import postman from '../assets/Postman.png'
 import chakra from '../assets/chakra-ui-icon.svg'
 
-
 const Experience = () => {
   return (
     <App>
         <div className=" min-h-screen">
         <Box>
             <ExperienceDisplay jobTitle={'Frontend Developer Intern'} startDate={'August 2024'} endDate={'Present'} companyname={'InternPulse'} jobDecription={' Designed and implemented a user authentication system, ensuring data security and compliance with industry standards.'} jobDecription1={'Collaborated with senior developers and UI/UX designers to troubleshoot technical issues and improve code efficiency.'} />
-
         </Box>
-        
         <div className="px-4">
         <Heading marginBottom={'10px'} marginTop={'10px'}>Skills</Heading>
         <Box display={'flex'} flexWrap={'wrap'} w={{xl:'1024px'}} gap={'15px'} className=" xl:mx-auto py-2"> 
