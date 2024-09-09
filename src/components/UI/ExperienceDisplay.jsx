@@ -1,4 +1,7 @@
 import { Box,Heading,Text,UnorderedList,ListItem } from "@chakra-ui/react"
+import PropTypes from 'prop-types';
+
+
 
 const ExperienceDisplay = ({jobTitle,companyname,startDate,endDate,jobDecription,jobDecription1}) => {
   return (
@@ -17,6 +20,16 @@ const ExperienceDisplay = ({jobTitle,companyname,startDate,endDate,jobDecription
 
     </div>
   )
+}
+
+ExperienceDisplay.propTypes = {
+  jobTitle:PropTypes.string.isRequired,
+  companyname:PropTypes.string.isRequired,
+  startDate:PropTypes.string.isRequired,
+  endDate:PropTypes.string.isRequired,
+  jobDecription:PropTypes.string,
+  jobDecription1:PropTypes.string,
+
 }
 
 export default ExperienceDisplay

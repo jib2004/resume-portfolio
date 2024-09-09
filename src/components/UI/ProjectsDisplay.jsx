@@ -1,6 +1,8 @@
 import { Box,Image,Link,Heading,Text } from "@chakra-ui/react"
 import github from '../../assets/github-sign.png'
 import { CiGlobe } from "react-icons/ci";
+import PropTypes from 'prop-types';
+
 
 const ProjectsDisplay = ({img,text,githubLink,liveLink,projectTitle,d}) => {
   return (
@@ -20,5 +22,15 @@ const ProjectsDisplay = ({img,text,githubLink,liveLink,projectTitle,d}) => {
     </Box>
   )
 }
+
+ProjectsDisplay.propTypes={
+  img:PropTypes.string,
+  text:PropTypes.string,
+  githubLink:PropTypes.string,
+  liveLink:PropTypes.string,
+  projectTitle:PropTypes.string,
+  d:PropTypes.string
+}
+
 
 export default ProjectsDisplay

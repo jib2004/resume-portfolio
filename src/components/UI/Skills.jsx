@@ -1,4 +1,7 @@
 import { Box,Image } from "@chakra-ui/react"
+import PropTypes from 'prop-types';
+
+
 
 const Skills = ({img}) => {
   return (
@@ -7,5 +10,10 @@ const Skills = ({img}) => {
     </Box>
   )
 }
+
+Skills.propTypes={
+  img:PropTypes.string
+}
+
 
 export default Skills
