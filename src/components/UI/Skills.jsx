@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Skills = ({img}) => {
   return (
     <Box>
-        <Image src={img} className=" size-12 md:size-32" objectFit={'contain'} />
+        <Image src={img} alt={`image of ${img.slice(10)}`} className=" size-12 md:size-32" objectFit={'contain'} />
     </Box>
   )
 }

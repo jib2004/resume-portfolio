@@ -25,7 +25,7 @@ const Home = () => {
             </Box>
         </Box>
         <Box w={{base:'90vw',md:'464px'}} className='mx-auto md:m-0'>
-          <Image src={myPhoto} w={{base:'90vw',md:'464px'}}  h={{base:'400px',md:'489px'}} objectFit={'fit'} borderBottomStartRadius={{md:'200px'}} className='img'/>
+          <Image src={myPhoto} w={{base:'90vw',md:'464px'}} alt='Image of me' h={{base:'400px',md:'489px'}} objectFit={'fit'} borderBottomStartRadius={{md:'200px'}} className='img'/>
         </Box>
       </Box>
     </App>
