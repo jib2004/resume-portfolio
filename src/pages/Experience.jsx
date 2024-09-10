@@ -22,7 +22,8 @@ const Experience = () => {
     <App>
         <div className=" min-h-screen">
         <Box>
-            <ExperienceDisplay jobTitle={'Frontend Developer Intern'} startDate={'August 2024'} endDate={'Present'} companyname={'InternPulse'} jobDecription={' Designed and implemented a user authentication system, ensuring data security and compliance with industry standards.'} jobDecription1={'Collaborated with senior developers and UI/UX designers to troubleshoot technical issues and improve code efficiency.'} />
+            <ExperienceDisplay jobTitle={'Frontend Developer Intern'} startDate={'August 2024'} endDate={'Present'} companyname={'InternPulse'} jobDecription={' Designed and implemented a user authentication system, ensuring data security and compliance with industry standards.'} jobDecription1={'Collaborated with senior developers and UI/UX designers to troubleshoot technical issues and improve code efficiency.'} d2={'none'} d3={'none'} d4={'none'} />
+            <ExperienceDisplay jobTitle={'Frontend Developer'} startDate="June 2024" endDate="August 2024" companyname="Freelance" jobDecription={' Built custom websites and landing pages for small businesses, exceeding client expectations and achieving a 100% success rate in meeting project deadlines'} jobDecription1={' Utilized SEO best practices to optimize website content.'} jobDecription2={' Provided ongoing technical support and maintenance for clients, ensuring website functionality and security.'}  d3={'none'} d4={'none'}/>
         </Box>
         <div className="px-4">
         <Heading marginBottom={'10px'} marginTop={'10px'}>Skills</Heading>
