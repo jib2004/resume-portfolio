@@ -1,51 +1,24 @@
-import App from "../App"
-import { Heading,Box } from "@chakra-ui/react"
+import { Text,Box } from "@chakra-ui/react"
 import ExperienceDisplay from "../components/UI/ExperienceDisplay"
-import Skills from "../components/UI/Skills"
-import html from  '../assets/html-5.png'
-import css from  '../assets/css-3.png'
-import bootstrap from  '../assets/Bootstrap.png'
-import js from  '../assets/js.png'
-import react from  '../assets/react.png'
-import node from  '../assets/Node.js.png'
-import mongo from  '../assets/MongoDB.png'
-import nextjs from '../assets/Next.js.png'
-import tailwind from '../assets/Tailwind CSS.png'
-import git from '../assets/git.png'
-import github from '../assets/github-sign.png'
-import expressjs from  '../assets/Express.png' 
-import postman from '../assets/Postman.png'
-import chakra from '../assets/chakra-ui-icon.svg'
+import Tag from "../components/UI/Tag"
+import { useContext } from "react"
+import { ThemeContext } from "../useContext/context"
 
 const Experience = () => {
+  const {theme} = useContext(ThemeContext)
   return (
-    <App>
-        <div className=" min-h-screen">
+    
+        <div id="experience" className={` xl:min-h-screen p-6 ${theme === "light" ? "bg-[#F9FAFB]" : "bg-[#111827]"}`}>
+          <Tag tagName="Experience"/>
+          <Text textAlign={'center'} padding={'10px'}>Here is a quick summary of my most recent experiences:</Text>
         <Box>
-            <ExperienceDisplay jobTitle={'Frontend Developer Intern'} startDate={'August 2024'} endDate={'Present'} companyname={'InternPulse'} jobDecription={' Designed and implemented a user authentication system, ensuring data security and compliance with industry standards.'} jobDecription1={'Collaborated with senior developers and UI/UX designers to troubleshoot technical issues and improve code efficiency.'} d2={'none'} d3={'none'} d4={'none'} />
+            <ExperienceDisplay jobTitle={'Frontend Developer Intern'} startDate={'August 2024'} endDate={'October 2024'} companyname={'InternPulse'} jobDecription={' Designed and implemented a user authentication system, ensuring data security and compliance with industry standards.'} jobDecription1={'Collaborated with senior developers and UI/UX designers to troubleshoot technical issues and improve code efficiency.'} jobDecription2={'Effective communication with the team to ensure clear goal understanding, fostering collaboration, and building trust.'}  jobDecription3={'Led the frontend team, overseeing project delivery and managing pull requests to ensure timely and high-quality outcomes. Adapted quickly to leadership challenges, driving team efficiency and collaboration to meet deadlines.'} d4={'none'} />
             <ExperienceDisplay jobTitle={'Frontend Developer'} startDate="June 2024" endDate="August 2024" companyname="Freelance" jobDecription={' Built custom websites and landing pages for small businesses, exceeding client expectations and achieving a 100% success rate in meeting project deadlines'} jobDecription1={' Utilized SEO best practices to optimize website content.'} jobDecription2={' Provided ongoing technical support and maintenance for clients, ensuring website functionality and security.'}  d3={'none'} d4={'none'}/>
         </Box>
-        <div className="px-4">
-        <Heading marginBottom={'10px'} marginTop={'10px'}>Skills</Heading>
-        <Box display={'flex'} flexWrap={'wrap'} w={{xl:'1024px'}} gap={'15px'} className=" xl:mx-auto py-2"> 
-            <Skills img={html}/>
-            <Skills img={css}/>
-            <Skills img={js}/>
-            <Skills img={react}/>
-            <Skills img={tailwind}/>
-            <Skills img={bootstrap}/>
-            <Skills img={chakra}/>
-            <Skills img={git}/>
-            <Skills img={github}/>
-            <Skills img={postman}/>
-            <Skills img={nextjs}/>
-            <Skills img={node}/>
-            <Skills img={expressjs}/>
-            <Skills img={mongo}/>
-        </Box>
+
+        
         </div>
-        </div>
-    </App>
+    
   )
 }
 

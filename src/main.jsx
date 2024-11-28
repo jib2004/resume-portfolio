@@ -10,6 +10,7 @@ import {
 import About from './pages/About.jsx'
 import Projects from './pages/Projects.jsx'
 import Experience from './pages/Experience.jsx'
+import { ThemeContext, ThemeProvider } from './useContext/context.jsx'
 
 const router = createBrowserRouter([
   {
@@ -32,8 +33,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+  <ThemeProvider>
     <ChakraProvider>
     <RouterProvider router={router} />
     </ChakraProvider>
+    </ThemeProvider>
   </StrictMode>,
 )

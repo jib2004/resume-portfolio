@@ -1,33 +1,74 @@
 import App from '../App'
-import { Heading,Box,Text,Button,Image } from '@chakra-ui/react'
+import { Heading,Box,Text,Image } from '@chakra-ui/react'
 import myPhoto from '../assets/WhatsApp Image 2023-03-07 at 14.20.11.jpeg'
-import resume from '../assets/Obasa Ajibola Resume.pdf'
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { ThemeContext } from '../useContext/context'
+import location from '../assets/location.svg'
+import avilable from '../assets/avilable.svg'
+import About from './About'
+import git from '../assets/gitHeader.svg'
+import linkedin from '../assets/icons8-linkedin (1).svg'
+import Experience from './Experience'
+import ShillDisplay from './ShillDisplay'
+import Projects from './Projects'
+
 const Home = () => {
   const navigate = useNavigate();
+  const {theme} = useContext(ThemeContext);
   const projectSection =()=>{
     navigate('/project')
   }
   return (
     <App>
-      <Box w={'100vw'} h={{xl:'100vh'}} display={'flex'} alignItems={{md:'center'}} justifyContent={'space-around'} flexDirection={{base:'column-reverse',xl:'row'}}>
-        <Box w={{xl:'606px'}}>
-            <Heading fontSize={{base:'30px' ,md:'60px'}}  color={'#018DB0'} lineHeight={{md:'77px'}} textAlign={'center'}>   
-            Hi, I’m Ajibola, a
-            <span className='text-[#D1884F]'> Frontend Developer. </span>
+      <Box w={'100vw'} h={{xl:'552px'}}  display={'flex'} alignItems={{md:'center'}} justifyContent={'space-around'} flexDirection={{base:'column-reverse',xl:'row'}}>
+        <Box w={{xl:'850px'}} display={"flex"} flexDirection={"column"} gap={"20px"}>
+            
+            <Box w={{md:'auto'}} textAlign={{base:'center',md:'start'}} className='px-3  xl:p-0'>
+            <Heading fontSize={{base:'30px' ,md:'60px'}}  color={theme === "light" ? "#111827" : "#F9FAFB"} lineHeight={{md:'77px'}} >   
+            Hi, I&apos;m Ajibola
             </Heading>
-            <Box w={{md:'auto'}} textAlign={{base:'center',md:'start'}} className='px-3 md:p-0'>
-                <Text fontSize={'20px'} fontWeight={500}>As a web developer, I bring a unique set of skills and experience that make me a valuable addition to any team. I have a solid foundation in programming languages such as HTML, CSS, JavaScript and TypeScript, as well as experience with frameworks like React and Nextjs . Additionally, I am well-versed in server-side technologies like Node.js and its framework Expressjs, and have experience working with databases like MongoDB. But beyond technical skills, I am a team player who values collaboration and communication. I thrive in environments where I can work with others to solve complex problems and create innovative solutions. I am also dedicated to staying up-to-date with the latest technologies and industry trends, ensuring that my work is always of the highest quality. Overall, I believe that my technical expertise, collaborative mindset, and commitment to excellence make me an ideal candidate for any web development role.</Text>
-                <Box display={'flex'}  alignItems={'center'}  justifyContent={{base:"center",xl:"start"}} paddingTop={'10px'} paddingBottom={'10px'}>
-                  <Button w={{base:'150px',md:'205px'}} marginRight={'15px'} background={'blue'} color={'#fff'}><a href={resume} download className='w-full h-full flex items-center justify-center'>Resume</a> </Button>
-                  <Button onClick={projectSection} w={{base:'150px',md:'205px'}} background={'#fff'} border={'2px'} borderColor={'blue'} color={'blue'}>See My Projects</Button>
-                </Box>
+                <Text fontSize={'1.125rem'} textAlign={'justify'}>
+                I&apos;m a skilled web developer with expertise in HTML, CSS, JavaScript, TypeScript, and frameworks like React and Next.js.
+                I am also experienced in server-side development using Node.js and Express.js and database management with MongoDB. 
+                A collaborative team player, I excel in solving complex problems and delivering innovative solutions. Committed to staying current with industry trends, I ensure my work is of the highest quality, making me a strong candidate for any web development role.
+                </Text>
             </Box>
+            <Box> 
+            <figure className='flex items-center gap-2 mb-2'>
+              <Image src={location} alt='location icon'/>
+              <figcaption className={`${theme === "light" ? "text-[#4B5563]": "text-[#D1D5DB]"}  leading-6`}>Lagos, Nigeria</figcaption>
+              </figure> 
+
+              <figure className='flex items-center gap-2'>
+              <Image src={avilable} alt='green icon'/>
+              <figcaption className={`${theme === "light" ? "text-[#4B5563]": "text-[#D1D5DB]"}  leading-6`}>Available for new projects</figcaption>
+              </figure> 
+            </Box>
+
+            <ul className='flex gap-2'>
+              <li className='w-fit'><a href="https://github.com/jib2004" target='_blank'><Image src={git} alt='My github profile' /></a></li>
+              <li className='w-fit'><a href="https://www.linkedin.com/in/obasa-ajibola-005690242/" target='_blank'><Image src={linkedin} alt='My linkedIn profile' /></a></li>
+            </ul>
         </Box>
-        <Box w={{base:'90vw',md:'464px'}} className='mx-auto md:m-0'>
-          <Image src={myPhoto} w={{base:'90vw',md:'464px'}} alt='Image of me' h={{base:'400px',md:'489px'}} objectFit={'fit'} borderBottomStartRadius={{md:'200px'}} className='img'/>
+        <div className=''>
+        <Box width={{base:'280px',md:'400px'}} height={{base:'300px',md:"360px"}} className='mx-auto md:m-0'>
+          <figure className={`relative size-fit  before:content-[""] before:absolute md:before:top-10 md:before:left-6 before:w-full before:h-full ${theme === "light" ? 'before:bg-[#E5E7EB]' : 'before:bg-[#374151]'} `}>
+          <Image src={myPhoto} 
+          position={"relative"} 
+          w={{base:'240px',md:'280px'}} 
+          alt='Image of me' h={{base:'280px',md:'320px'}}     
+          loading='lazy'
+    objectFit={'fit'} />
+    </figure>
         </Box>
+        </div>
       </Box>
+
+      <About />
+      <ShillDisplay/>
+      <Experience/>
+      <Projects/>
     </App>
   )
 }

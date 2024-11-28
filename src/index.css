@@ -6,14 +6,15 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
 }
 body{
   overflow-x: hidden;
   background-color: #E5E5E5;
 }
-.img{
+/* .img{
   box-shadow: -15px 1px #008AAA;
-}
+} */
 @media (max-width:500px) {
   *{
     overflow-x: hidden;
@@ -21,4 +22,25 @@ body{
   .img{
     box-shadow: none;
   }  
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: fit-content;
+  font-size: 40px;
+  font-family: system-ui,sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0000;
+  -webkit-text-stroke: 1px #000;
+  background: 
+    linear-gradient(90deg,#0000 33%,#000 0 67%,#0000 0) 
+    0/300% 100% no-repeat text;
+  animation: l2 2s linear infinite;
+}
+.loader:before {
+  content: "OBASA AJIBOLA";
+}
+@keyframes l2 {
+  0%{background-position: 100%}
 }

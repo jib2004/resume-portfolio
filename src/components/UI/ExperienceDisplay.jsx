@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 const ExperienceDisplay = ({jobTitle,companyname,startDate,endDate,jobDecription,jobDecription1,jobDecription2,jobDecription3,jobDecription4,d2,d3,d4}) => {
   return (
-    <div className="px-1 md:px-[10px] my-6">
-        <Box display={'flex'} alignItems={'center'} justifyContent={'space-between'}>
-        <Heading size={{base:'', md:"2xl"}}>{jobTitle}</Heading>
+    <div className="px-1 md:px-[10px] my-6 ">
+        <Box display={'flex'} alignItems={{base:'start' ,md:'center'}} className=" flex-col md:flex-row" justifyContent={'space-between'}>
+        <Heading size={{base:'', md:"xl",xl:'2xl'}}>{jobTitle}</Heading>
         <Text>{`${startDate} - ${endDate}`}</Text>
         </Box>
         <Heading size={{base:'', md:"2xl"}}>{companyname}</Heading>
