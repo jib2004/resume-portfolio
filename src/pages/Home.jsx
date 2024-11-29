@@ -1,7 +1,6 @@
 import App from '../App'
 import { Heading,Box,Text,Image } from '@chakra-ui/react'
 import myPhoto from '../assets/WhatsApp Image 2023-03-07 at 14.20.11.jpeg'
-import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { ThemeContext } from '../useContext/context'
 import location from '../assets/location.svg'
@@ -12,13 +11,10 @@ import linkedin from '../assets/icons8-linkedin (1).svg'
 import Experience from './Experience'
 import ShillDisplay from './ShillDisplay'
 import Projects from './Projects'
+import ContactMe from './ContactMe'
 
 const Home = () => {
-  const navigate = useNavigate();
   const {theme} = useContext(ThemeContext);
-  const projectSection =()=>{
-    navigate('/project')
-  }
   return (
     <App>
       <Box w={'100vw'} h={{xl:'552px'}}  display={'flex'} alignItems={{md:'center'}} justifyContent={'space-around'} flexDirection={{base:'column-reverse',xl:'row'}}>
@@ -69,6 +65,7 @@ const Home = () => {
       <ShillDisplay/>
       <Experience/>
       <Projects/>
+      <ContactMe/>
     </App>
   )
 }

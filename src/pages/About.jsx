@@ -7,7 +7,7 @@ import graduationPic from '../assets/WhatsApp Image 2024-11-21 at 19.46.02.jpeg'
 const About = () => {
   const {theme} = useContext(ThemeContext)
   return (
-  <div id="about" className={`${theme === "light" ? "bg-[#F9FAFB]" : "bg-[#111827]"}   md:p-6 md:h-[100vh] `}>
+  <section id="about" className={`${theme === "light" ? "bg-[#F9FAFB]" : "bg-[#111827]"}   md:p-6 md:h-[100vh] `}>
   <div className="w-[90vw] mx-auto">
   <Tag tagName="About"/>
         <Box w={{base:'100vw'}} display={"flex"} justifyContent={{md:"center"}}  alignItems={{ md:"center"}} className="mx-auto h-full py-6 flex-col xl:flex-row">
@@ -33,7 +33,7 @@ const About = () => {
           </Box>
             </Box>
             </div>
-            </div>
+            </section>
   )
 }
 

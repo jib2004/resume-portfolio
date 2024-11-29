@@ -28,7 +28,7 @@ import { ThemeContext } from "../useContext/context"
 const ShillDisplay = () => {
     const {theme} = useContext(ThemeContext)
   return (
-    <div className="p-6">
+    <section className="p-6">
         <Tag tagName="Skills"/>
         <div className="px-4 py-6">
         <Box display={{base:'grid',md:'flex'}} flexWrap={'wrap'} w={{xl:'1024px'}} gap={'15px'} className=" grid-cols-3 xl:mx-auto py-2"> 
@@ -54,7 +54,7 @@ const ShillDisplay = () => {
             
         </Box>
         </div>
-    </div>
+    </section>
   )
 }
 

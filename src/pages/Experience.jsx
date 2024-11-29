@@ -8,7 +8,7 @@ const Experience = () => {
   const {theme} = useContext(ThemeContext)
   return (
     
-        <div id="experience" className={` xl:min-h-screen p-6 ${theme === "light" ? "bg-[#F9FAFB]" : "bg-[#111827]"}`}>
+        <section id="experience" className={` xl:min-h-screen p-6 ${theme === "light" ? "bg-[#F9FAFB]" : "bg-[#111827]"}`}>
           <Tag tagName="Experience"/>
           <Text textAlign={'center'} padding={'10px'}>Here is a quick summary of my most recent experiences:</Text>
         <Box>
@@ -17,7 +17,7 @@ const Experience = () => {
         </Box>
 
         
-        </div>
+        </section>
     
   )
 }
