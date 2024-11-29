@@ -8,7 +8,7 @@ const Skills = ({img,imgName}) => {
   return (
     <Box width={{md:"88px"}} height={{md:"100px"}} display={"flex"} flexDirection={"column"} alignItems={"center"}>
         <Image src={img} alt={`image of ${img.slice(10)}`} className=" size-12 md:size-[64px]" objectFit={'contain'} />
-        <figcaption className={` ${theme !== "light" && "text-[#D1D5DB]"} text-[1.125rem] leading-7`}>{imgName}</figcaption>
+        <figcaption className={` ${theme !== "light" && "text-[#D1D5DB]"} text-[0.8125rem] md:text-[1.125rem] leading-7`}>{imgName}</figcaption>
     </Box>
   )
 }

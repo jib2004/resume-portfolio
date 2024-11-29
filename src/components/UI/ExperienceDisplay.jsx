@@ -9,7 +9,7 @@ const ExperienceDisplay = ({jobTitle,companyname,startDate,endDate,jobDecription
         <Text>{`${startDate} - ${endDate}`}</Text>
         </Box>
         <Heading size={{base:'', md:"2xl"}}>{companyname}</Heading>
-        <UnorderedList className="w-[90vw] md:mx-0 md:w-auto">
+        <UnorderedList className=" md:mx-0 md:w-auto">
           <ListItem marginTop={'5px'}>{jobDecription}</ListItem>
           <ListItem marginTop={'5px'}>{jobDecription1}</ListItem>
           <ListItem marginTop={'5px'} display={d2}>{jobDecription2}</ListItem>

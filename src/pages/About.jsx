@@ -8,7 +8,7 @@ const About = () => {
   const {theme} = useContext(ThemeContext)
   return (
   <section id="about" className={`${theme === "light" ? "bg-[#F9FAFB]" : "bg-[#111827]"}   md:p-6 md:h-[100vh] `}>
-  <div className="w-[90vw] mx-auto">
+  <div className="md:w-[90vw] mx-auto">
   <Tag tagName="About"/>
         <Box w={{base:'100vw'}} display={"flex"} justifyContent={{md:"center"}}  alignItems={{ md:"center"}} className="mx-auto h-full py-6 flex-col xl:flex-row">
           <Box flexBasis={{ base:'100%',md:"40%"}} display={'flex'} justifyContent={'center'} className="mb-4 xl:mb-0">
@@ -16,8 +16,9 @@ const About = () => {
               <Image src={graduationPic} loading="lazy" alt="Image of me on my graduation page" width={"100%"} height={"100%"} objectFit={"contain"}/>
             </figure>
           </Box>
-          <Box flexBasis={"60%"} display={"flex"} justifyContent={"center"}>
-          <Text lineHeight={"24px"} width={{base:"",md:"600px"}} textAlign={"justify"} >
+
+          <Box flexBasis={{base:"100%", md:"60%"}} display={"flex"} justifyContent={"center"} >
+          <Text lineHeight={"24px"} width={{base:"300px",md:"600px"}} textAlign={"justify"} >
             As a web developer, I bring a unique set of skills and experience that make me a valuable addition to any team. 
             I have a solid foundation in programming languages such as HTML, CSS, JavaScript and TypeScript, 
             as well as experience with frameworks like React and Nextjs . 
