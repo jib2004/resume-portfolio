@@ -23,7 +23,7 @@ function App({children}) {
     { loading ? 
     <LoadingScreen loadingState={loading}/>
     :
-    <div  className={theme === "light" ? "bg-white text-gray-600":" bg-gray-950 text-white"}>
+    <div  className={` animate-fadeIn  ${theme === "light" ? "bg-white text-gray-600":" bg-gray-950 text-white"}   ` }>
     <Navbar />
      {children}
      <Footer />
